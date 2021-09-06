@@ -1,0 +1,28 @@
+Padinet :
+ ☐ Metode Reminder
+ ☐ Nomor Kontak PIC
+ ☐ Nomor Kontak Pelanggan 
+ ☐ Fitur Sales CRUD @created(18-08-29 15:09)
+--- ✄ -----------------------
+
+Week 9 :
+ ✔ Database PIC @done (18-08-30 15:07)
+ ✔ Database Pelanggan @done (18-08-30 15:07)
+  ✘ Benarkan punya Calvin @cancelled (18-08-30 15:07)
+ ✔ Detail Invoice @done (18-08-29 14:35)
+ ✔ Database Sales @created(18-08-30 15:08) @done (18-08-30 19:07)
+ ✔ Create Pelanggan = Tambahkan NPWP + Alamat Penagihan + Dokumen Pelengkap Tagihan (Upload) + SOP (Upload) + Nama-Kontak-Jabatan PIC + Nama Sales + Periode Kontrak @done (18-09-03 13:19)
+ ☐ CRUD Pelanggan @started(18-08-29 14:37) @toggle(18-08-29 16:00) @toggle(18-08-30 15:00) @toggle(18-08-30 19:08) @toggle(18-09-07 13:12) @toggle(18-09-07 16:11)
+ ✔ Laporan Magang Week 9 @done (18-09-03 13:19)
+--- ✄ -----------------------
+
+Week 10 :
+ ✔ File Uploading CodeIgniter @created(18-09-02 15:00) @done (18-09-03 13:18)
+ ✔ Create PIC Pelanggan @created(18-09-03 13:18) @done (18-09-06 13:11)
+ ✔ Laporan Magang Week 10 @created(18-09-03 13:20) @done (18-09-08 12:45)
+ ✔ Belajar AJAX @created(18-09-04 15:35) @done (18-09-05 13:11)
+ ✔ CRUD Contact PIC @created(18-09-06 13:12) @done (18-09-06 17:36)
+
+Week 11 :
+ ☐ Menyelesaikan Edit Pelanggan @created(18-09-11 13:15)
+ ☐ CRUD Sales @created(18-09-11 13:16)
