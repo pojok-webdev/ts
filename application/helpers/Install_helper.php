@@ -21,7 +21,7 @@ function sendfile($localfile){
 	$config['debug']    = TRUE;
 
 	$ci->ftp->connect($config);
-	if($ci->ftp->upload($localfile, '/Task List/NB/Puji Widi P/kholis/file.pdf', 'ascii', 0775)){
+	if($ci->ftp->upload($localfile, '/Task List/NB/Puji Widi P/kholis/filev1.pdf', 'ascii', 0775)){
 		echo 'sukses membuat File';
 	}else{
 		echo 'tidak bisa membuat File';
