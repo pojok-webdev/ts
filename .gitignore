@@ -31,3 +31,4 @@ user_guide
 /tests/tests/
 /tests/results/
 application/config/padi.php
+application/config/database.php
