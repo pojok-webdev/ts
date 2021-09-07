@@ -16,7 +16,11 @@ class Installs extends CI_Controller {
 	}
 	function createreport(){
 		$installsiteid = $this->uri->segment(3);
-		$query = "select c.name,concat(day(a.install_date),'-',month(a.install_date),'-',year(a.install_date)) ins_date,b.address,case a.status when '0' then 'belum selesai' when '1' then 'selesai' else 'belum selesai' end installstatus,a.resume,d.srv,e.xcutor,f.pic,g.tipe iwtipe,g.macboard iwmacboard,g.ip_ap iwip_ap,g.essid iwessid,g.ip_ethernet iwip_ethernet,g.freqwency iwfreqwency,g.polarization iwpolarization,g.signal iwsignal,g.quality iwquality,g.throughput_udp iwthroughput_udp,g.throughput_tcp iwthroughput_tcp,g.user iwuser,g.password iwpassword from install_sites a ";
+		$query = "select b.id siteid,c.id cid,c.name,concat(day(a.install_date),'-',month(a.install_date),'-',year(a.install_date)) ins_date,b.address,";
+		$query.= "case a.status when '0' then 'belum selesai' when '1' then 'selesai' else 'belum selesai' end installstatus,a.resume,d.srv,e.xcutor,f.pic,g.tipe iwtipe,";
+		$query.= "g.macboard iwmacboard,g.ip_ap iwip_ap,g.essid iwessid,g.ip_ethernet iwip_ethernet,g.freqwency iwfreqwency,g.polarization iwpolarization,";
+		$query.= "g.signal iwsignal,g.quality iwquality,g.throughput_udp iwthroughput_udp,g.throughput_tcp iwthroughput_tcp,g.user iwuser,g.password iwpassword ";
+		$query.= "from install_sites a ";
 		$query.= "left outer join client_sites b on b.id=a.client_site_id ";
 		$query.= "left outer join clients c on c.id=b.client_id ";
 		$query.= "left outer join (select client_site_id,group_concat(name) srv from clientservices group by client_site_id) d on d.client_site_id=b.id ";

@@ -26,9 +26,17 @@
         $html2pdf->writeHTML($content, isset($_GET['vuehtml']));
         //$html2pdf->Output('exemple03.pdf');
         $localfile = $this->config->item('localfile');
-        $html2pdf->output($localfile, 'F');
+        $lf = str_replace('hello3',$obj->siteid."-".str_replace("/","_",$obj->name),$localfile);
+        $html2pdf->output($lf, 'F');
         //$html2pdf->output($localfile);
-        //sendfile($localfile);
+        if(1==1){
+            sendfile(array(
+                'localfile'=>$lf,
+                'output'=>str_replace(' ','-',$obj->siteid."-".str_replace("/","_",$obj->name))
+                )
+            );
+        }
+        redirect('/installs');
 //        $this->ftp->upload('/local/path/to/myfile.html', '/public_html/myfile.html', 'ascii', 0775);
     }
     catch(HTML2PDF_exception $e) {

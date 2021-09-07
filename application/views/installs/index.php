@@ -236,32 +236,31 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th><input type="checkbox"></th>
                                             <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>Alias</th>
+                                            <th>Address</th>
+                                            <th>Install Date</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>Alias</th>
+                                            <th>Address</th>
+                                            <th>Install Date</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <?php foreach($clients as $client){?>
                                         <tr>
+                                            <td><input type="checkbox"></td>
                                             <td><?php echo $client->name;?></td>
                                             <td><?php echo $client->alias;?></td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
+                                            <td><?php echo $client->address;?></td>
+                                            <td><?php echo $client->installsdate;?></td>
                                             <td>
                                             <button class="btn btn-primary dropdown-toggle" type="button"
                                                 id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
@@ -270,7 +269,7 @@
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                 aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="/installs/createreport/<?php echo $client->id;?>">Generate Install Report</a>
+                                                <a class="dropdown-item" href="/installs/createreport/<?php echo $client->installsiteid;?>">Generate Install Report</a>
                                                 <a class="dropdown-item" href="/surveys/createreport/<?php echo $client->id;?>">Generate Survey Report</a>
                                                 <a class="dropdown-item" href="/troubleshoots/createreport/<?php echo $client->id;?>">Generate Troubleshoot Report</a>
                                             </div>
