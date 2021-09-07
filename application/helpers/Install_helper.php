@@ -12,7 +12,6 @@ function gettopologivsdfiles($id){
 	return($arr);
 }
 function sendfile($params){
-	print_r($params);
 	$ci = & get_instance();
 	$ci->load->library('ftp');
 
