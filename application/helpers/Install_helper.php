@@ -11,7 +11,8 @@ function gettopologivsdfiles($id){
 	}      
 	return($arr);
 }
-function sendfile($localfile){
+function sendfile($params){
+	print_r($params);
 	$ci = & get_instance();
 	$ci->load->library('ftp');
 
@@ -21,10 +22,11 @@ function sendfile($localfile){
 	$config['debug']    = TRUE;
 
 	$ci->ftp->connect($config);
-	if($ci->ftp->upload($localfile, '/Task List/NB/Puji Widi P/kholis/filev1.pdf', 'ascii', 0775)){
+	if($ci->ftp->upload($params['localfile'], '/Task List/NB/Puji Widi P/kholis/'.$params['output'].'.pdf', 'ascii', 0775)){
 		echo 'sukses membuat File';
 	}else{
 		echo 'tidak bisa membuat File';
 	};
 	$ci->ftp->close();
+	
 }
