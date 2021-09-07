@@ -32,3 +32,4 @@ user_guide
 /tests/results/
 application/config/padi.php
 application/config/database.php
+application/config/config.php
