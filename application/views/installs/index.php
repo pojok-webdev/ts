@@ -230,6 +230,7 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">PElanggan PadiNET</h6>
+                            <button id="btnDownloadSelected">Download Selected</button>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -246,6 +247,7 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
+                                            <th><input type="checkbox"></th>
                                             <th>Name</th>
                                             <th>Alias</th>
                                             <th>Address</th>
@@ -256,7 +258,7 @@
                                     <tbody>
                                         <?php foreach($clients as $client){?>
                                         <tr>
-                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox" class="clients" value='<?php echo $client->installsiteid;?>'></td>
                                             <td><?php echo $client->name;?></td>
                                             <td><?php echo $client->alias;?></td>
                                             <td><?php echo $client->address;?></td>
@@ -292,7 +294,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; PadiApp 2021</span>
                     </div>
                 </div>
             </footer>
@@ -330,6 +332,7 @@
     </div>
 
     <?php $this->load->view('commons/footer');?>
+    <script src="/assets/padinet/js/padiFtp.js"></script>
 </body>
 
 </html>
