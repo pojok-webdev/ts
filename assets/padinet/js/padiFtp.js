@@ -18,3 +18,14 @@ $(".checkAll").click(function(){
     console.log("test")
     $("input:checkbox").prop('checked',this.checked)
 });
+$(".generateinstallpdf").click(function(){
+    $.ajax({
+        url:'/installs/createreport/'+installsiteid
+    })
+    .done(res=>{
+        console.log("res",res);
+    })
+    .fail(err=>{
+        console.log("Err",err);
+    });
+});

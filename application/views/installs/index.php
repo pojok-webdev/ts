@@ -83,17 +83,9 @@
                                             <td><?php echo $client->address;?></td>
                                             <td><?php echo $client->installsdate;?></td>
                                             <td>
-                                            <button class="btn btn-primary dropdown-toggle" type="button"
-                                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="false">
-                                                Action
-                                            </button>
-                                            <div class="dropdown-menu animated--fade-in"
-                                                aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="/installs/createreport/<?php echo $client->installsiteid;?>">Generate Install Report</a>
-                                                <a class="dropdown-item" href="/surveys/createreport/<?php echo $client->id;?>">Generate Survey Report</a>
-                                                <a class="dropdown-item" href="/troubleshoots/createreport/<?php echo $client->id;?>">Generate Troubleshoot Report</a>
-                                            </div>
+                                            <a href='/installs/createreport/<?php echo $client->installsiteid;?>' class="btn btn-primary" type="button" class="generateinstallpdf" >
+                                                Generate PDF to Lavender
+                                            </a>
                                             </td>
                                         </tr>
                                         <?php }?>
