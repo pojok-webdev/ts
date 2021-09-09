@@ -54,7 +54,8 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Action</h1>
-                    <p class="mb-4">Berikut akan melakukan generate report (PDF) ke  Lavender.</p>
+                    <p class="mb-4">Berikut akan melakukan generate report (PDF) ke  Lavender. Format output: id_pelanggan-id_cabang-nama_pelanggan.pdf. 
+                        Lokasi output: \\192.168.0.234\Public\History Pelanggan\instalasi</p>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
