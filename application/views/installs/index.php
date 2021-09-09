@@ -76,7 +76,7 @@
                                     </thead>
                                     <tbody>
                                         <?php foreach($clients as $client){?>
-                                        <tr>
+                                        <tr trid="<?php echo $client->client_site_id;?>">
                                             <td><input type="checkbox" class="clients" value='<?php echo $client->installsiteid;?>'></td>
                                             <td><?php echo $client->name;?></td>
                                             <td><?php echo $client->alias;?></td>
@@ -144,6 +144,7 @@
 
     <?php $this->load->view('commons/footer');?>
     <script src="/assets/padinet/js/padiFtp.js"></script>
+    <script src="/assets/padinet/js/checkExists.js"></script>
 </body>
 
 </html>
