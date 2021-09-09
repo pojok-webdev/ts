@@ -27,7 +27,7 @@ Class Client extends CI_Model{
 		$sql.= " order by a.create_date desc ";
 
         // $sql.= 'where active="1" ';
-        $sql.= 'limit 0,10';
+        //$sql.= 'limit 0,10';
         $ci = & get_instance();
         $que = $ci->db->query($sql);
         return array(

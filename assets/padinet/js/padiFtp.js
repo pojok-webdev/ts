@@ -14,3 +14,7 @@ $('#btnDownloadSelected').click(function(){
         });
     });
 });
+$(".checkAll").click(function(){
+    console.log("test")
+    $("input:checkbox").prop('checked',this.checked)
+});

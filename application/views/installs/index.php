@@ -54,7 +54,7 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Action</h1>
-                    <p class="mb-4">Berikut akan melakukan generate report (PDF) ke  <a target="_blank" href="https://datatables.net">Lavender</a>.</p>
+                    <p class="mb-4">Berikut akan melakukan generate report (PDF) ke  Lavender.</p>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -66,7 +66,7 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th><input type="checkbox"></th>
+                                            <th><input type="checkbox" class="checkAll"></th>
                                             <th>Name</th>
                                             <th>Alias</th>
                                             <th>Address</th>
@@ -74,16 +74,6 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th><input type="checkbox"></th>
-                                            <th>Name</th>
-                                            <th>Alias</th>
-                                            <th>Address</th>
-                                            <th>Install Date</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </tfoot>
                                     <tbody>
                                         <?php foreach($clients as $client){?>
                                         <tr>
