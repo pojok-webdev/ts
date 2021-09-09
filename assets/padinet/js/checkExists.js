@@ -1,7 +1,7 @@
 $('.clients').each(function(){
     client = $(this).attr('value');
     console.log('client',client)
-    $.ajax({
+    /*$.ajax({
         url:'/installs/checkexists/'+client,
         dataType:'json'
     })
@@ -10,5 +10,5 @@ $('.clients').each(function(){
     })
     .fail(err=>{
         console.log('Err',err)
-    });
+    });*/
 })
