@@ -32,7 +32,7 @@
         if(1==1){
             sendfile(array(
                 'localfile'=>$lf,
-                'output'=>str_replace(' ','-',$obj->siteid."-".str_replace("/","_",$obj->name))
+                'output'=>str_replace(' ','-',$obj->cid."-".$obj->siteid."-".str_replace("/","_",$obj->name))
                 )
             );
         }
