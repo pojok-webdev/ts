@@ -67,30 +67,12 @@ class Installs extends CI_Controller {
 		$start = 36;
 		foreach($list as $fl){
 			$filename = substr($fl,$start,strlen($fl)-$start);
-			echo $filename.'<br />';
+			$tmparr = explode("-",$filename);
+			$sql = 'insert into existingreportfiles (client_id,client_site_id,name) ';
+			$sql.= 'values ';
+			$sql.= '('.$tmparr['0'].','.$tmparr['1'].','.$tmparr['2'].')';
+			echo $sql.'<br />';
 		}
 		$this->ftp->close();
-	}
-	function ftpcreatefolder(){
-		$this->load->library('ftp');
-
-		$config['hostname'] = '192.168.0.234';
-		$config['username'] = 'puji';
-		$config['password'] = 'puj12021';
-		$config['debug']    = TRUE;
-
-		$this->ftp->connect($config);
-		if($this->ftp->mkdir('/Task List/NB/Puji Widi P/kholis',0755)){
-			echo 'sukses membuat Folder';
-		}else{
-			echo 'tidak bisa membuat folder';
-		};
-		$this->ftp->close();
-	}
-	function createfolder(){
-		$target_dir="../../media/profile/".date('my')."/";
-		if(!file_exists($target_dir)){
-			mkdir($target_dir,0777);
-		}
 	}
 }
