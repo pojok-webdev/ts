@@ -54,6 +54,17 @@ class Installs extends CI_Controller {
 		$this->load->view("reports/installreport",$data);
 
 	}
+	function emptyingutilities(){
+		$sql = 'delete from utilities.existingreportfiles ';
+		$ci = & get_instance();
+		$que = $ci->db->query($sql);
+	}
+	function resetnumber(){
+		$sql = 'alter table utilities.existingreportfiles ';
+		$sql.= 'auto_increment = 1';
+		$ci = & get_instance();
+		$que = $ci->db->query($sql);
+	}
 	function checkexists(){
 		$this->load->library('ftp');
 
@@ -75,5 +86,10 @@ class Installs extends CI_Controller {
 			$que = $ci->db->query($sql);
 		}
 		$this->ftp->close();
+	}
+	function doresetutilities(){
+		$this->emptyingutilities();
+		$this->resetnumber();
+		$this->checkexists();
 	}
 }
