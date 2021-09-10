@@ -68,10 +68,11 @@ class Installs extends CI_Controller {
 		foreach($list as $fl){
 			$filename = substr($fl,$start,strlen($fl)-$start);
 			$tmparr = explode("-",$filename);
-			$sql = 'insert into existingreportfiles (client_id,client_site_id,name) ';
+			$sql = 'insert into utilities.existingreportfiles (client_id,client_site_id,name) ';
 			$sql.= 'values ';
-			$sql.= '('.$tmparr['0'].','.$tmparr['1'].','.$tmparr['2'].')';
-			echo $sql.'<br />';
+			$sql.= '("'.$tmparr['0'].'","'.$tmparr['1'].'","'.$tmparr['2'].'"); ';
+			$ci = & get_instance();
+			$que = $ci->db->query($sql);
 		}
 		$this->ftp->close();
 	}
