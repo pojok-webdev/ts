@@ -9,6 +9,32 @@ Class Home extends CI_Controller{
         );
         $this->load->view('pages/home',$data);
     }
+	function checkexists(){
+		$id = $this->uri->segment(3);
+		$this->load->library('ftp');
+
+		$config['hostname'] = '192.168.0.234';
+		$config['username'] = 'puji';
+		$config['password'] = 'puj12021';
+		$config['debug']    = TRUE;
+
+		$this->ftp->connect($config);
+		echo 'Aplikasi\n';
+		$list = $this->ftp->list_files('/Aplikasi');
+		print_r($list);
+		echo '\n\nTask List\n';
+		$list = $this->ftp->list_files('/Task List/NB/Puji Widi P');
+
+		print_r($list);
+		echo '<br >';
+		echo '<br >';
+		echo '<br >';
+		echo '<br >';
+		echo $list[0];
+		$this->ftp->close();
+
+
+	}
 	function getfolders(){
 		$this->load->library('ftp');
 
